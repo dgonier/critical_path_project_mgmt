@@ -1,0 +1,21 @@
+﻿Activity Tasks,Task Name,Predecessors,Optimistic,Most Likely,Pessimistic
+A,Drive the tentative routes  ,,0.8,2,3
+B,Ask the roads departments for information about the tentative route ,A,9,20,40
+C,Ask the county councils for information about the tentative route ,A,9,15,20
+D,Approach county councils for permits ,"B,C",1,1,2
+E,Send requests for the insurance certificate to the Toronto national office ,D,0,1,1
+F,Obtain the permits from the county councils ,E,4,5,7
+G,Contact all emergency services  ,F,5,7,8
+H,Set the checkpoints and estimate the kilometer markings ,G,8,11,15
+I,Determine kilometer descriptions  ,H,1,1,2
+J,Create list of locations associated with emergency phone numbers,H,0.8,1,2
+K,Verify road conditions ,H,0.7,1,1
+L,Draw detailed maps with checkpoints and prepare route description  ,"I,K",1.5,2,2.5
+M,Prepare list of locations associated with emergency phone numbers ,"J,L",0.4,0.5,1
+N,Present the routes to the committee and Voyageur staff  ,L,0.1,0.1,0.1
+O,Print internal copy of map and route descriptions ,N,0.5,0.5,1
+P,Print list of locations associated with emergency phone numbers ,M,0.1,0.1,0.1
+Q,"Distribute internal maps, route description and emergency phone numbers to staff and volunteers","O,P",1,1,2
+R,Print maps and route description for cyclists ,Q,0.5,0.5,1
+S,Distribute maps and route description to cyclists ,R,0.2,0.5,0.5
+T,END,S,0,0,0

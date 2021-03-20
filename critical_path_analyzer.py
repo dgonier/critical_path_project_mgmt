@@ -117,56 +117,6 @@ class critical_path_analyzer():
         self.tasks['critical_task'] = self.tasks['Activity Tasks'].isin(self.critical_path)
         return self.critical_path
 
-# cpa = critical_path_analyzer(name='initial')
-
-    # def get_critical_path_archive(self):
-    #
-    #     visitedList = [[]]
-    #
-    #
-    #
-    #
-    #     tasks_pred = self.tasks
-    #     # print(tasks_pred.head())
-    #     tasks_pred['multi_pred'] = tasks_pred['Predecessors'].apply(lambda x: ',' in x)
-    #     non_splitting_tasks = set(list(list(tasks_pred[~tasks_pred.multi_pred]['Predecessors'])))
-    #     non_splitting_tasks.remove('None')
-    #     multi_preds_list = list(tasks_pred[tasks_pred.multi_pred]['Predecessors'])
-    #     for i, p in enumerate(multi_preds_list):
-    #         print(p)
-    #         for p2 in multi_preds_list[i+1:]:
-    #             multi_preds_list[i] = ','.join([i if i not in p2 else i +'*' for i in multi_preds_list[i].split(',') ])
-    #             # for i2, p_i in enumerate(p.split(',')):
-    #             #     if p_i in p2:
-    #             #         print(p_i, p2, multi_preds_list[i])
-    #             #         multi_preds_list[i] = multi_preds_list[i][i2] + '*'
-    #
-    #     # for l in multi_preds_list:
-    #     #     print(l)
-    #     out = list(itertools.combinations_with_replacement(self.flatten(multi_preds_list), len(multi_preds_list)))
-    #     out = [x for x in out if
-    #            len(x) == len(set(x)) and not any([len(set(p).intersection(set(x))) > 1 for p in multi_preds_list])]
-    #
-    #     paths = [sorted(list(set(o).union(non_splitting_tasks))) for o in out]
-    #
-    #     for i, p in enumerate(paths):
-    #         # TODO: REMOVE ANYTHING THAT HAS MORE THAN ONE * IN IT
-    #         # p = [x.replace('*', '') for x in p]
-    #         paths[i] = sorted(list(set(p)))
-    #
-    #     # for p in paths:
-    #         # print(p)
-    #
-    #     self.max_val = 0
-    #     for i, p in enumerate(paths):
-    #         print(i, p)
-    #         val = self.sum_path(p)
-    #
-    #         if val > self.max_val:
-    #             self.max_val = val
-    #             self.critical_path = p
-    #     self.tasks['critical_task'] = self.tasks['Activity Tasks'].isin(self.critical_path)
-    #     self.critical_path_units = self.max_val
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

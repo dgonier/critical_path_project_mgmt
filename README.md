@@ -4,6 +4,9 @@
 ### Example command
 
 ## dont wanna deal with environments?
+
+Make sure to add the csv files to colab still!
+
 [Open in Colab](https://colab.research.google.com/github/dgonier/critical_path_project_mgmt/blob/master/critical_path_notebook.ipynb)
 
 

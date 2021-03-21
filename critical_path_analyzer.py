@@ -20,7 +20,7 @@ class critical_path_analyzer():
         csv_path = kwargs.get('csv_path', os.path.join(os.getcwd(), file))
         self.tasks = pd.read_csv(csv_path)
         self.tasks['Predecessors'] = self.tasks['Predecessors'].fillna(value='None')
-        self.tasks['expected_value'] = (self.tasks['Most Likely'] * 2 + self.tasks['Optimistic'] + self.tasks[
+        self.tasks['expected_value'] = (self.tasks['Most Likely'] * 4 + self.tasks['Optimistic'] + self.tasks[
             'Pessimistic']) / 6
         self.output_file_type = kwargs.get('output_file_type', 'png')
         if self.output_file_type is None:
